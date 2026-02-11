@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Message For You ❤️</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Floating Hearts Background Animation -->
+    <div class="hearts-container" id="heartsContainer"></div>
+
+    <!-- Page 1: Welcome Page -->
+    <div class="page active" id="page1">
+        <div class="content">
+            <div class="welcome-heart">💖</div>
+            <h1 class="main-title">A Special Message For You ❤️</h1>
+            <p class="subtitle">Someone has something from the heart to ask you...</p>
+            <button class="btn btn-primary" onclick="goToPage(2)">
+                Open My Heart 💌
+            </button>
+        </div>
+    </div>
+
+    <!-- Page 2: Love Message Page -->
+    <div class="page" id="page2">
+        <div class="content">
+            <h2 class="page-title">My Dearest Love 💕</h2>
+            <div class="letter-container">
+                <div id="typewriter" class="typewriter-text"></div>
+            </div>
+            
+            <!-- Photo Gallery Placeholder -->
+            <div class="photo-gallery">
+                <h3>Our Beautiful Moments 📸</h3>
+                <div class="gallery-grid">
+                    <div class="photo-placeholder">
+                        <div class="photo-icon">🖼️</div>
+                        <p>Photo 1</p>
+                    </div>
+                    <div class="photo-placeholder">
+                        <div class="photo-icon">🖼️</div>
+                        <p>Photo 2</p>
+                    </div>
+                    <div class="photo-placeholder">
+                        <div class="photo-icon">🖼️</div>
+                        <p>Photo 3</p>
+                    </div>
+                    <div class="photo-placeholder">
+                        <div class="photo-icon">🖼️</div>
+                        <p>Photo 4</p>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="btn btn-primary" onclick="goToPage(3)">
+                Continue to My Question 💖
+            </button>
+        </div>
+    </div>
+
+    <!-- Page 3: Reasons I Love You -->
+    <div class="page" id="page3">
+        <div class="content">
+            <h2 class="page-title">Reasons Why I Love You 🌹</h2>
+            
+            <!-- Music Player -->
+            <div class="music-player">
+                <button id="musicBtn" onclick="toggleMusic()">
+                    🎵 Play Music
+                </button>
+                <audio id="bgMusic" loop>
+                    <!-- You can add your own music file here -->
+                    <!-- <source src="romantic-music.mp3" type="audio/mpeg"> -->
+                </audio>
+            </div>
+            
+            <div class="reasons-container" id="reasonsContainer">
+                <div class="reason-card">
+                    <div class="card-number">1</div>
+                    <h3>Your Beautiful Smile 😊</h3>
+                    <p>Your smile lights up my entire world and makes even the darkest days bright</p>
+                </div>
+                <div class="reason-card">
+                    <div class="card-number">2</div>
+                    <h3>Your Kind Heart 💝</h3>
+                    <p>The way you care for others and show compassion inspires me every single day</p>
+                </div>
+                <div class="reason-card">
+                    <div class="card-number">3</div>
+                    <h3>Your Laughter 🎶</h3>
+                    <p>Your laugh is the most beautiful sound I've ever heard, it's pure music to my ears</p>
+                </div>
+                <div class="reason-card">
+                    <div class="card-number">4</div>
+                    <h3>Your Intelligence 🌟</h3>
+                    <p>The way your mind works amazes me, and I love our deep conversations</p>
+                </div>
+                <div class="reason-card">
+                    <div class="card-number">5</div>
+                    <h3>Your Strength 💪</h3>
+                    <p>You face challenges with grace and courage that constantly inspires me</p>
+                </div>
+                <div class="reason-card">
+                    <div class="card-number">6</div>
+                    <h3>Your Gentle Touch 🤝</h3>
+                    <p>Every moment we're together feels like magic, and your presence comforts me</p>
+                </div>
+                <div class="reason-card">
+                    <div class="card-number">7</div>
+                    <h3>Your Dreams 🌈</h3>
+                    <p>Your passions and aspirations make you even more beautiful to me</p>
+                </div>
+                <div class="reason-card">
+                    <div class="card-number">8</div>
+                    <h3>Your Authenticity 💎</h3>
+                    <p>You're genuinely yourself, and that authenticity is absolutely precious</p>
+                </div>
+                <div class="reason-card">
+                    <div class="card-number">9</div>
+                    <h3>Your Support 🤗</h3>
+                    <p>You believe in me even when I doubt myself, and that means everything</p>
+                </div>
+                <div class="reason-card">
+                    <div class="card-number">10</div>
+                    <h3>Simply Being You 🌺</h3>
+                    <p>Every little thing about you makes my heart skip a beat. You're perfect just as you are</p>
+                </div>
+            </div>
+            
+            <button class="btn btn-primary" onclick="goToPage(4)">
+                One Last Question 🌹
+            </button>
+        </div>
+    </div>
+
+    <!-- Page 4: Valentine Question Page -->
+    <div class="page" id="page4">
+        <div class="content">
+            <div class="question-container">
+                <h1 class="big-question">Will You Be My Valentine? 💍❤️</h1>
+                <p class="question-subtitle">This would make me the happiest person alive...</p>
+                
+                <div class="buttons-container">
+                    <button class="btn btn-yes" id="yesBtn" onclick="handleYes()">
+                        Yes, of course! 😍
+                    </button>
+                    <button class="btn btn-no" id="noBtn" onmouseover="moveNoButton()">
+                        No 😢
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 5: Success Page -->
+    <div class="page" id="page5">
+        <div class="content">
+            <div class="celebration-container">
+                <!-- Confetti will be generated by JavaScript -->
+                <div id="confetti"></div>
+                
+                <div class="success-heart">💖</div>
+                <h1 class="success-title">You just made me the happiest person alive! ❤️</h1>
+                
+                <div class="final-message">
+                    <p class="love-message">
+                        Thank you for saying yes and making this moment absolutely magical. 
+                        From this day forward, I promise to cherish every moment we share together.
+                    </p>
+                    
+                    <div class="promise-box">
+                        <h3>My Promise to You 💝</h3>
+                        <p>
+                            I promise to make you smile every day, to support your dreams, 
+                            to hold your hand through every adventure, and to love you more 
+                            with each passing moment. You mean the world to me.
+                        </p>
+                    </div>
+                    
+                    <!-- Animated couple illustration placeholder -->
+                    <div class="couple-illustration">
+                        <div class="animated-hearts-couple">
+                            💑
+                            <div class="floating-hearts-couple">
+                                <span>💕</span>
+                                <span>💖</span>
+                                <span>💗</span>
+                                <span>💓</span>
+                                <span>💝</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="closing-line">
+                        Forever yours, with all my heart 💕
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
